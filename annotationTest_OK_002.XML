@@ -1,0 +1,43 @@
+<AnnotationTranslation>
+  <TranslationTable fromResource="FCSaggregator" fromLayer="PoS" fromFormalism="UD17" toResource="CGN" toLayer="PoS" toFormalism="CGN_PoS" translationType="ReplaceAll">
+    <Pair from="N" to="Noun" />
+  </TranslationTable>
+  <TranslationTable fromResource="CGN" fromLayer="PoS" fromFormalism="CGN_PoS" toResource="FCSaggregator" toLayer="PoS" toFormalism="UD17" translationType="ReplaceAll">
+    <Pair from="N"    to="NOUN" />
+    <Pair from="N"    to="PROPNN" />
+    <Pair from="ADJ"  to="ADJ" />
+    <Pair from="WW"   to="VERB" />
+    <Pair from="TW"   to="NUM" />
+    <Pair from="TW"   to="ADJ" />
+    <Pair from="VNW"  to="PRON" />
+    <Pair from="VNW"  to="DET" />
+    <Pair from="VNW"  to="ADV" />
+    <Pair from="LID"  to="DET" />
+    <Pair from="VZ"   to="ADP" />
+    <Pair from="VG"   to="CONJ" />
+    <Pair from="VG"   to="SCONJ" />
+    <Pair from="BIJW" to="ADV" />
+    <Pair from="TSW"  to="INTJ" />
+    <Pair from="LET"  to="PUNCT" />
+    <Pair from="SPEC" to="X" />
+  </TranslationTable>
+  <TranslationTable fromResource="FCSaggregator" fromLayer="PoS" fromFormalism="UD17" toResource="CGN" toLayer="PoS" toFormalism="CGN_PoS" translationType="ReplaceAll">
+    <Pair from="NOUN"   to="N" />
+    <Pair from="PROPN"  to="N" />
+    <Pair from="ADJ"    to="ADJ" />
+    <Pair from="VERB"   to="WW" />
+    <Pair from="NUM"    to="TW" />
+    <Pair from="ADJ"    to="TW" />
+    <Pair from="PRON"   to="VNW" />
+    <Pair from="DET"    to="VNW" />
+    <Pair from="ADV"    to="VNW" />
+    <Pair from="DET"    to="LID" />
+    <Pair from="ADP"    to="VZ" />
+    <Pair from="CONJ"   to="VG" />
+    <Pair from="SCONJ"  to="VG" />
+    <Pair from="ADV"    to="BIJW" />
+    <Pair from="INTJ"   to="TSW" />
+    <Pair from="PUNCT"  to="LET" />
+    <Pair from="X"      to="SPEC" />
+  </TranslationTable>
+</AnnotationTranslation>

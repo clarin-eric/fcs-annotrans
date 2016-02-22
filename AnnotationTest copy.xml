@@ -1,0 +1,8 @@
+<AnnotationTranslation>
+  <TranslationTable fromResource="FCSaggregator" fromLayer="PoS" fromFormalism="UD17" toResource="CGN" toLayer="PoS" toFormalism="CGN_PoS" transType="ReplaceAll">
+    <Pair from="N" to="Noun" />
+  </TranslationTable>
+  <TranslationTable fromResource="CGN" fromLayer="PoS" fromFormalism="CGN_PoS" toResource="FCSaggregator" toLayer="PoS" toFormalism="UD17" transType="ReplaceAll">
+    <Pair from="Noun" to="N" />
+  </TranslationTable>
+</AnnotationTranslation>
