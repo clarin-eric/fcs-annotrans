@@ -18,7 +18,7 @@ public class AnnotationTranslatorTestDriver {
     TranslationTable FcsCgnPhon = null;
     TranslationTable CgnFcsPhon = null;
     
-    final String AnnotationTranslationFileName = "annotationTest_OK_003.XML";
+    final static String ANNOTATION_TRANSLATION_FILENAME = "annotationTest_OK_003.XML";
     
     boolean getTranslationTypeData(AnnotationTranslator at) {
         ttWhole = at.getTranslationType("replaceWhole");
@@ -148,11 +148,11 @@ public class AnnotationTranslatorTestDriver {
         }
     }
     
-    void testTranslator() {
+    void testTranslator(final String annotationTranslationFileName) {
         //--- get translation information from XML file
-        AnnotationTranslator at = new AnnotationTranslator(AnnotationTranslationFileName);
+        AnnotationTranslator at = new AnnotationTranslator(annotationTranslationFileName);
         if (at == null) {
-            System.err.println("*** ERROR *** failed to load AnnotationTranslator from file \"" + AnnotationTranslationFileName + "\"");
+            System.err.println("*** ERROR *** failed to load AnnotationTranslator from file \"" + annotationTranslationFileName + "\"");
             return;
         }
         if (!getTranslationTypeData(at)) {
@@ -165,12 +165,17 @@ public class AnnotationTranslatorTestDriver {
         testPhonTranslations(at);        
     }
         
-    AnnotationTranslatorTestDriver() {
+    AnnotationTranslatorTestDriver(final String annotationTranslationFileName) {
         //testTrellis();
-        testTranslator();
+        testTranslator(annotationTranslationFileName);
     }
     
     public static void main(String[] arguments) {
-        AnnotationTranslatorTestDriver attd = new AnnotationTranslatorTestDriver();
+        AnnotationTranslatorTestDriver attd;
+	if (arguments.length > 0) {
+	    attd = new AnnotationTranslatorTestDriver(arguments[0]);
+	} else {
+	    attd = new AnnotationTranslatorTestDriver(ANNOTATION_TRANSLATION_FILENAME);
+	}
     }
 };
