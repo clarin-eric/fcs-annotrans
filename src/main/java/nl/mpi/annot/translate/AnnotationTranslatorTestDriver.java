@@ -18,7 +18,7 @@ public class AnnotationTranslatorTestDriver {
     TranslationTable FcsCgnPhon = null;
     TranslationTable CgnFcsPhon = null;
     
-    final String AnnotationTranslationFileName = "AnnotationTest_OK_003.xml";
+    final String AnnotationTranslationFileName = "annotationTest_OK_003.XML";
     
     boolean getTranslationTypeData(AnnotationTranslator at) {
         ttWhole = at.getTranslationType("replaceWhole");
