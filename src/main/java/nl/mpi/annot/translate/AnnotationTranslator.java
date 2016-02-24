@@ -6,6 +6,7 @@
 package nl.mpi.annot.translate;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -52,7 +53,11 @@ public class AnnotationTranslator {
     TranslationType getTranslationType(String ttId) {
         return translationTypes.getTranslationType(ttId);
     }
-    
+
+    public List<TranslationTable> getTranslationTables() {
+        return translationTables.getList();
+    }
+
     TranslationTable findTranslationTable(String fromRes, String fromLay, String toRes, String toLay, TranslationType ty) {
         return translationTables.find(fromRes, fromLay, toRes, toLay, ty);
     }

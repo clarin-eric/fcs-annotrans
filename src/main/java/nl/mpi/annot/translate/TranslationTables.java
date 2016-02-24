@@ -7,6 +7,7 @@ package nl.mpi.annot.translate;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  *
@@ -52,6 +53,10 @@ public class TranslationTables {
         translationTableArray.add(nw);
         translationTableMap.put(transTabKey, translationTableArray.size() - 1);
         return nw;
+    }
+
+    public List<TranslationTable> getList() {
+	return translationTableArray;
     }
     
     TranslationTable find(String fromRes, String fromLay, String toRes, String toLay, TranslationType ty) {

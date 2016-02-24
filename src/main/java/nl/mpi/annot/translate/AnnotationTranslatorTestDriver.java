@@ -155,14 +155,14 @@ public class AnnotationTranslatorTestDriver {
             System.err.println("*** ERROR *** failed to load AnnotationTranslator from file \"" + annotationTranslationFileName + "\"");
             return;
         }
-        if (!getTranslationTypeData(at)) {
-            return;
-        }
-        if (!getTranslationTableData(at)) {
-            return;
-        }
-        testPoSTranslations(at);
-        testPhonTranslations(at);        
+        if (getTranslationTypeData(at) && getTranslationTableData(at)) {
+	    testPoSTranslations(at);
+	    testPhonTranslations(at);        
+        } else {
+	    for (TranslationTable ttable : at.getTranslationTables()) {
+		ttable.display();
+	    }
+	}
     }
         
     AnnotationTranslatorTestDriver(final String annotationTranslationFileName) {
